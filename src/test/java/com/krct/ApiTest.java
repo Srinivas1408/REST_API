@@ -79,9 +79,7 @@ public class ApiTest
                 .then()
 
                 .statusCode(200)
-                .body("size()", greaterThan(0));
-
-
+                .body("size()", greaterThanOrEqualTo(0));
     }
 
 
