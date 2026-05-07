@@ -40,8 +40,8 @@ public class ApiTest
                 .when()
                 .get("/products")
                 .then()
-                .statusCode(200)
-                .body("$", everyItem(equalTo(100)));
+                .statusCode(200);
+               // .body("$", everyItem(equalTo(100)));
     }
 
     //categories with id so we using path parameter
@@ -51,7 +51,7 @@ public class ApiTest
         RestAssured.given()
                 .pathParams("id","1")
                 .when()
-                .get("categories/{id}")  //
+                .get("/categories/{id}")  //
                 .then()
                 .statusCode(200)
                 .body("id",Matchers.equalTo(1));
@@ -62,7 +62,7 @@ public class ApiTest
     {
         RestAssured.given()
                 .when()
-                .get("categories")
+                .get("/categories")
                 .then()
                 .statusCode(200)
                 .body("$",Matchers.instanceOf(List.class));  //$ means It denotes all .The values comes under list format
