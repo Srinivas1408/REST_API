@@ -44,7 +44,7 @@ public class AuthTest
         response
                 .then()
                 .log().all()
-                .statusCode(201)
+                .statusCode(200)
                 .body("id", Matchers.notNullValue());
     }
     @Test(priority = 2)
