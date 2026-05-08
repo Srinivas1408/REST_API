@@ -20,7 +20,7 @@ jobs:
       - run: mvn test
 
       - name: Send HTML Report Mail
-      - uses: dawidd6/action-send-mail@v3
+        uses: dawidd6/action-send-mail@v3
         with:
           server-address: smtp.gmail.com
           server-port: 465
