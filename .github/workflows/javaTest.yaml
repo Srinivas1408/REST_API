@@ -32,7 +32,7 @@ jobs:
 
           subject : Automation Test Report
 
-          to : srinivassri1408@gmail.com
+          to : srinivas14082004@gmail.com
           from : Gitbub Actions
 
           html_body : file://target/surefire-reports/emailable-report.html
